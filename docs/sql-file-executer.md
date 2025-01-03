@@ -25,28 +25,41 @@ pnpm install
 
 ## Configuration
 
-1. Create a `.env` file based on `example.env`:
+- Create a `.env` file based on `example.env`:
 
 ```env
-DB_USER=user
-DB_PASSWORD=password
-DB_HOST=localhost
-DB_DATABASE=db
+DB_USER=your_username
+DB_PASSWORD=your_password
+DB_HOST=your_db_host
+DB_DATABASE=your_database_name
 DB_PORT=5432
 DB_SCHEMA=public
 ```
 
+To update the configuration:
+
+1. Create or edit the .env file in the root directory
+2. Replace the placeholder values with your actual database credentials:
+  - `your_username`: Your PostgreSQL username
+  - `your_password`: Your PostgreSQL password
+  - `your_db_host`: Hostname where PostgreSQL is running
+  - `your_database_name`: Name of your target database
+  - The default port `5432` and schema `public` can be left as-is for typical PostgreSQL installations
+
 ## Quick Start
 
-- Run the script with the SQL dump file path and Prisma schema:
 ```bash
-node lib/sql-file-executer.js path/to/dump.sql path/to/schema.prisma
-```
-
-- Run the script with the SQL dumps and without the Prisma schema:
-```bash
+# Basic usage with SQL dump file
 node lib/sql-file-executer.js path/to/dump.sql
-```
+
+# With Prisma schema for table dependency ordering
+node lib/sql-file-executer.js path/to/dump.sql -s path/to/schema.prisma
+
+# Skip execution until specific line number
+node lib/sql-file-executer.js path/to/dump.sql --skip-line-until 1000
+
+# Only generate execution order without running statements
+node lib/sql-file-executer.js path/to/dump.sql -s path/to/schema.prisma --only-execution-order
 
 ## Configuration Settings
 
@@ -96,7 +109,7 @@ These settings control how the script processes and organizes SQL statements dur
 Run the script by providing the SQL file path and optionally the Prisma schema:
 
 ```sh
-node lib/sql-file-executer.js path/to/dump.sql [path/to/schema.prisma]
+node lib/sql-file-executer.js path/to/dump.sql -s [path/to/schema.prisma]
 ```
 
 ### Process Flow

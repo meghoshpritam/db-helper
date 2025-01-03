@@ -39,7 +39,7 @@ DB_SCHEMA=public
 2. Run the executor:
 ```sh
 # With Prisma schema for table ordering
-node lib/sql-file-executer.js path/to/dump.sql path/to/schema.prisma
+node lib/sql-file-executer.js path/to/dump.sql -s path/to/schema.prisma
 
 # Without schema
 node lib/sql-file-executer.js path/to/dump.sql
