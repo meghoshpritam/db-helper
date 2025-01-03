@@ -45,7 +45,7 @@ node lib/sql-file-executer.js path/to/dump.sql path/to/schema.prisma
 node lib/sql-file-executer.js path/to/dump.sql
 ```
 
-## 📚 Documentation
+## 📚 Full Documentation
 
 - [SQL File Executor](docs/sql-file-executer.md)
 
