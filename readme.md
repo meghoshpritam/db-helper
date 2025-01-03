@@ -4,6 +4,8 @@ A robust Node.js utility for reliably importing large SQL dumps into PostgreSQL 
 
 [![GitHub stars](https://img.shields.io/github/stars/meghoshpritam/db-helper?style=social)](https://img.shields.io/github/stars/meghoshpritam/db-helper)
 
+![cover](/static/db-helper.png)
+
 ## 🎯 Motivation
 
 Importing large SQL dumps often fails due to:
