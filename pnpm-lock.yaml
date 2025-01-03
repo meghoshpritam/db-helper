@@ -17,6 +17,9 @@ importers:
       dotenv:
         specifier: ^16.4.7
         version: 16.4.7
+      ora:
+        specifier: 5.4.1
+        version: 5.4.1
       pg:
         specifier: ^8.13.1
         version: 8.13.1
