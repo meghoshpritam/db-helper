@@ -1,12 +1,12 @@
 {
   "name": "pg-db-sync",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A robust Node.js utility for reliably importing large SQL dumps into PostgreSQL databases with intelligent table ordering and error handling.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "restore": "lib/sql-file-executor.js"
+    "restore": "./lib/sql-file-executer.js"
   },
   "repository": {
     "type": "git",
