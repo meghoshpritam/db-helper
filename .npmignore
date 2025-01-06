@@ -1,0 +1,7 @@
+docs/
+static/
+.cache/
+node_modules/
+.env
+*.log
+execution_order.json
